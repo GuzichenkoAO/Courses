@@ -1,7 +1,7 @@
-package com.guzichenko.courses.lesson_2.sources;
+package com.guzichenko.courses.lesson_2_class_initialize.sources;
 
 //can be public or default (package-private)
-public class Pet {
+public class ClassInitialize {
 
 	/**
 	 * Fields
@@ -39,13 +39,13 @@ public class Pet {
 	/**
 	 * Constructors
 	 */
-	public Pet() {
+	public ClassInitialize() {
 		System.out.println("I am Constructor. I am building object");
 		System.out.println();
 	}
 
 	//overloaded Constructor
-	public Pet(String name) {
+	public ClassInitialize(String name) {
 		this.name = name;
 		System.out.println("I am Constructor. I am building object");
 		System.out.println();
