@@ -12,13 +12,19 @@ public class ClientServiceImpl implements ClientService{
 
 	@Override
 	public void addClient() {
-		// do something
+		System.out.println("Add new client");
 	}
 
 	@Override
 	public void removeClient() {
-		// do something
+		System.out.println("Remove client");
+
 	}
 
+	@Override
+	public void editClient() {
+		System.out.println("Edit client");
+
+	}
 
 }
