@@ -11,8 +11,8 @@ public class ClientServiceImpl implements ClientService{
 	private List<Client> clients = new ArrayList<>();
 
 	@Override
-	public void addClient() {
-		System.out.println("Add new client");
+	public void addClient(Client client) {
+		clients.add(client);
 	}
 
 	@Override
