@@ -2,14 +2,19 @@ package com.guzichenko.courses.program.services;
 
 import com.guzichenko.courses.program.model.Client;
 
+import java.io.IOException;
+import java.util.List;
+
 public interface ClientService {
 
-	void addClient(Client client);
+    void addClient() throws IOException;
 
-	void removeClient();
+    void removeClient() throws IOException;
 
-	void editClient();
+    void editClient();
 
-	//modify, find etc....
+    List<Client> getAllClients();
+
+    //modify, find etc....
 
 }
