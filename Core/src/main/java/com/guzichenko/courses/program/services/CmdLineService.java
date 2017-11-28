@@ -60,6 +60,7 @@ public class CmdLineService {
                     for (Client client : clientService.getAllClients()) {
                         System.out.println(client);
                     }
+                    System.out.println();
                     break;
                 case "0":
                     isWork = false;
