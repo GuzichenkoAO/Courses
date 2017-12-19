@@ -6,7 +6,7 @@ public class Arithmetic {
 	public static void main(String[] args) {
 		int i = 0;
 
-		i = i + 2;
+		i = i + 3;
 		i = i - 2;
 		i = i * 2;
 		i = i / 2;
@@ -14,10 +14,14 @@ public class Arithmetic {
 
 		System.out.println(i);
 
+		String str1 = "2";
+		String str2 = "3";
 
-		String str = "Hello " + "World!";
+		String str = "Hello" + "World!" + "elfhagidfhaf" + "kjashdfl";
 
-		System.out.println(str);
+		boolean b1 = true;
+		boolean b2 = true;
+		System.out.println(b1 + "" +  b2);
 	}
 
 }

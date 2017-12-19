@@ -2,32 +2,25 @@ package com.guzichenko.courses.lesson_2_operators.loop;
 
 public class While {
 
-	public static void main(String[] args) {
-		int i = 0;
+    public static void main(String[] args) {
+        int[] ints = {1, 2, 5, 4, 15, 21, 0};
+        for (int i = 0; i < ints.length; i++) {
 
-		while (i < 10) {
-			i++;
-			System.out.println(i);
-		}
+            int lowest = ints[i];
+            for (int j = i + 1; j < ints.length; j++) {
+                if (lowest > ints[j]) {
+                    int temp = lowest;
+                    lowest = ints[j];
+                    ints[j] = temp;
+                    ints[i] = lowest;
+                }
+            }
+        }
 
-//		do {
-//			i++;
-//			System.out.println(i);
-//		}
-//		while (i <= 10);
 
-//		do {
-//			i++;
-//			if (i == 2) {
-//				continue;
-//			}
-//
-//			if (i == 5) {
-//				break;
-//			}
-//			System.out.println(i);
-//		}
-//		while (i <= 10);
-	}
+        for (int i : ints) {
+            System.out.println(i);
+        }
+    }
 
 }

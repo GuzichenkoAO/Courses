@@ -5,13 +5,17 @@ public class Unary {
 	public static void main(String[] args) {
 
 		int i = +1;
+		int k = 1;
 		int y = -1;
 
-		i++;
-		y--;
+		int g = ++i;
 
-		System.out.println(i);
-		System.out.println(y);
+		i = i + 1;
+		y--;
+		y = y - 1;
+
+		System.out.println(g);
+//		System.out.println(y);
 
 		boolean b = true;
 		System.out.println(!b);

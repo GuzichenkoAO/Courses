@@ -4,4 +4,5 @@ public abstract class Vehicle {
 
     abstract void drive();
 
+    void test() throws Exception{}
 }
