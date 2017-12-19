@@ -7,7 +7,6 @@ import com.guzichenko.courses.program.services.ClientService;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.ArrayList;
 import java.util.List;
 
 public class ClientServiceDb implements ClientService {
@@ -45,15 +44,22 @@ public class ClientServiceDb implements ClientService {
     }
 
     @Override
-    public void editClient() {
-        System.out.println("Edit client");
+    public void editClient() throws IOException {
+        System.out.println("Введите ID:");
+        int id = readNumber();
+        System.out.println("Введите имя:");
+        String name = reader.readLine();
+        System.out.println("Введите фамилию:");
+        String surname = reader.readLine();
+        System.out.println("Введите возраст:");
+        int age = readNumber();
+        dao.updateClient(new Client(id, name, surname, age));
 
     }
 
     @Override
     public List<Client> getAllClients() {
-//        return clients;
-        return new ArrayList<>();
+        return dao.getAll();
     }
 
 

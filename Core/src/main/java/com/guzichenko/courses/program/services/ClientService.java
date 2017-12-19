@@ -11,7 +11,7 @@ public interface ClientService {
 
     void removeClient() throws IOException;
 
-    void editClient();
+    void editClient() throws IOException;
 
     List<Client> getAllClients();
 
