@@ -4,7 +4,7 @@ import java.time.ZoneId;
 import java.util.Date;
 import java.util.TimeZone;
 
-public class B {
+public class Dates {
 
     static {
         TimeZone.setDefault(TimeZone.getTimeZone(ZoneId.of("Europe/Paris")));

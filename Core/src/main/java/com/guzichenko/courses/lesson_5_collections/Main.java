@@ -1,4 +1,4 @@
-package com.guzichenko.courses.lesson_6;
+package com.guzichenko.courses.lesson_5_collections;
 
 import java.util.*;
 

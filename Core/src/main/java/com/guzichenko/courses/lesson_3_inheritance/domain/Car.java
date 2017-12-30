@@ -1,7 +1,5 @@
 package com.guzichenko.courses.lesson_3_inheritance.domain;
 
-import com.guzichenko.courses.lesson_4.MyException;
-
 public class Car extends Vehicle {
 
     @Override
@@ -10,7 +8,7 @@ public class Car extends Vehicle {
     }
 
     @Override
-    void test(){
+    void test() {
 
     }
 }

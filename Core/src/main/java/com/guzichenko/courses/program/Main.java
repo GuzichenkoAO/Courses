@@ -2,7 +2,6 @@ package com.guzichenko.courses.program;
 
 import com.guzichenko.courses.program.services.CmdLineService;
 import com.guzichenko.courses.program.services.impl.ClientServiceDb;
-import com.guzichenko.courses.program.services.impl.ClientServiceImpl;
 import com.guzichenko.courses.program.services.impl.ProductServiceImpl;
 
 public class Main {
