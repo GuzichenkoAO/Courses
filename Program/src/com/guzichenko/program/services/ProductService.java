@@ -1,4 +1,4 @@
-package com.guzichenko.courses.program.services;
+package com.guzichenko.program.services;
 
 public interface ProductService {
 

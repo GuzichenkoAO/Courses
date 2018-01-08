@@ -1,6 +1,6 @@
-package com.guzichenko.courses.program.services.impl;
+package com.guzichenko.program.services.impl;
 
-import com.guzichenko.courses.program.services.ProductService;
+import com.guzichenko.program.services.ProductService;
 
 public class ProductServiceImpl implements ProductService {
 

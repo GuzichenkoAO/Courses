@@ -1,22 +1,23 @@
-package com.guzichenko.courses.program.services.impl;
+package com.guzichenko.program.services.impl;
 
-import com.guzichenko.courses.program.DAO.ClientDao;
-import com.guzichenko.courses.program.model.Client;
-import com.guzichenko.courses.program.services.ClientService;
+import com.guzichenko.program.model.Client;
+import com.guzichenko.program.services.ClientService;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.ArrayList;
 import java.util.List;
 
-public class ClientServiceDb implements ClientService {
+public class ClientServiceImpl implements ClientService {
 
-    private ClientDao dao;
+
     private BufferedReader reader;
+    private List<Client> clients;
 
-    public ClientServiceDb() {
+    public ClientServiceImpl() {
         this.reader = new BufferedReader(new InputStreamReader(System.in));
-        this.dao = new ClientDao();
+        this.clients = new ArrayList<>();
     }
 
     @Override
@@ -29,37 +30,29 @@ public class ClientServiceDb implements ClientService {
         String surname = reader.readLine();
         System.out.println("Введите возраст:");
         int age = readNumber();
-        dao.addClient(new Client(id, name, surname, age));
+        clients.add(new Client(id, name, surname, age));
     }
 
     @Override
     public void removeClient() throws IOException {
         System.out.println("Введите ID:");
         int id = readNumber();
-//        for (Client client : clients) {
-//            if (client.getId() == id) {
-//                clients.remove(client);
-//            }
-//        }
+        for (Client client : clients) {
+            if (client.getId() == id) {
+                clients.remove(client);
+            }
+        }
     }
 
     @Override
-    public void editClient() throws IOException {
-        System.out.println("Введите ID:");
-        int id = readNumber();
-        System.out.println("Введите имя:");
-        String name = reader.readLine();
-        System.out.println("Введите фамилию:");
-        String surname = reader.readLine();
-        System.out.println("Введите возраст:");
-        int age = readNumber();
-        dao.updateClient(new Client(id, name, surname, age));
+    public void editClient() {
+        System.out.println("Edit client");
 
     }
 
     @Override
     public List<Client> getAllClients() {
-        return dao.getAll();
+        return clients;
     }
 
 

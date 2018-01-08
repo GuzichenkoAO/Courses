@@ -1,4 +1,4 @@
-package com.guzichenko.courses.program.model;
+package com.guzichenko.program.model;
 
 import java.util.Objects;
 

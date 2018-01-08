@@ -1,6 +1,6 @@
-package com.guzichenko.courses.program.DAO;
+package com.guzichenko.program.DAO;
 
-import com.guzichenko.courses.program.model.Client;
+import com.guzichenko.program.model.Client;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -25,7 +25,7 @@ public class ClientDao {
 
     public void addClient(Client client) {
         try (PreparedStatement ps =
-                     connection.prepareStatement("insert into client (name, surname, age) values(? ,?, ?)");
+                     connection.prepareStatement("insert into client (name, surname, age) values(? ,?, ?)")
         ) {
             ps.setString(1, client.getName());
             ps.setString(2, client.getSurname());

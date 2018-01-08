@@ -1,6 +1,6 @@
-package com.guzichenko.courses.program.services;
+package com.guzichenko.program.services;
 
-import com.guzichenko.courses.program.model.Client;
+import com.guzichenko.program.model.Client;
 
 import java.io.IOException;
 import java.util.List;
