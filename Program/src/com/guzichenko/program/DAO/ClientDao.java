@@ -15,6 +15,7 @@ public class ClientDao {
 
     public ClientDao() {
         try {
+            Class.forName("org.h2.Driver");
             connection = DriverManager.getConnection(
                     "jdbc:h2:tcp://localhost/~/MyDB4", "", "");
 

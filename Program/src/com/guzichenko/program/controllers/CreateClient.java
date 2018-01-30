@@ -1,6 +1,8 @@
 package com.guzichenko.program.controllers;
 
+import com.guzichenko.program.DAO.ClientDao;
 import com.guzichenko.program.model.Client;
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -9,25 +11,28 @@ import javafx.stage.Stage;
 
 public class CreateClient {
 
-    @FXML
-    private TextField name;
-    @FXML
-    private TextField surname;
-    @FXML
-    private TextField age;
+	private ClientDao clientDao;
 
-    @FXML
-    private Button cancelButton;
+	@FXML
+	private TextField name;
+	@FXML
+	private TextField surname;
+	@FXML
+	private TextField age;
 
-    public Client readData(ActionEvent actionEvent) {
-        System.out.println(name.getText());
-        System.out.println(surname.getText());
-        System.out.println(age.getText());
-        return new Client(1, "", "", 0);
-    }
+	@FXML
+	private Button cancelButton;
 
-    public void back() {
-        Stage stage = (Stage) cancelButton.getScene().getWindow();
-        stage.close();
-    }
+	public CreateClient() {
+		this.clientDao = new ClientDao();
+	}
+
+	public void readData(ActionEvent actionEvent) {
+		clientDao.addClient(new Client(name.getText(), surname.getText(), Integer.valueOf(age.getText())));
+	}
+
+	public void back() {
+		Stage stage = (Stage) cancelButton.getScene().getWindow();
+		stage.close();
+	}
 }
