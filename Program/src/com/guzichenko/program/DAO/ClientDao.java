@@ -39,9 +39,7 @@ public class ClientDao {
 
     public List<Client> getAll() {
         try (PreparedStatement ps =
-                     connection.prepareStatement("SELECT * FROM client");
-        ) {
-
+                     connection.prepareStatement("SELECT * FROM client")) {
             ResultSet resultSet = ps.executeQuery();
             List<Client> clients = new ArrayList<>();
             while (resultSet.next()) {
@@ -51,6 +49,7 @@ public class ClientDao {
                 int age = resultSet.getInt("age");
                 clients.add(new Client(id, name, surname, age));
             }
+            resultSet.close();
             return clients;
         } catch (Exception e) {
             e.printStackTrace();
